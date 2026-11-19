@@ -1,0 +1,304 @@
+
+/* =================================
+   1. GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #171717;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   2. HEADER
+================================= */
+
+.header {
+    background: #ffffff;
+    padding: 25px 8%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.header h1 span {
+    color: #777777;
+}
+
+.header p {
+    color: #888888;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/* =================================
+   3. MAIN CONTAINER
+================================= */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 25px;
+}
+
+
+/* =================================
+   4. INTRODUCTION
+================================= */
+
+.intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.intro h2 {
+    font-size: 36px;
+    font-weight: 750;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    color: #777777;
+    font-size: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+
+/* =================================
+   5. AR VIEWER CARD
+================================= */
+
+.ar-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+#ar-container {
+    width: 100%;
+    height: 480px;
+    background: #eeeeef;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ar-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+.ar-message h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.ar-message p {
+    color: #777777;
+    font-size: 14px;
+}
+
+
+/* =================================
+   6. START BUTTON
+================================= */
+
+#start-button {
+    background: #171717;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#start-button:hover {
+    background: #444444;
+    transform: translateY(-2px);
+}
+
+#start-button:active {
+    transform: scale(0.97);
+}
+
+
+/* =================================
+   7. INSTRUCTIONS
+================================= */
+
+.instructions {
+    margin-top: 55px;
+}
+
+.instructions h3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.instruction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.instruction {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 22px;
+    transition: 0.3s ease;
+}
+
+.instruction:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.instruction h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.instruction p {
+    color: #888888;
+    font-size: 13px;
+}
+
+
+/* =================================
+   8. FOOTER
+================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #999999;
+    font-size: 12px;
+    border-top: 1px solid #e5e5e5;
+    background: #ffffff;
+}
+
+
+/* =================================
+   9. MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 35px 15px;
+    }
+
+    .intro h2 {
+        font-size: 27px;
+    }
+
+    #ar-container {
+        height: 400px;
+    }
+
+    .instruction-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .instructions {
+        margin-top: 35px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    #ar-container {
+        height: 350px;
+    }
+
+    .ar-card {
+        padding: 12px;
+    }
+
+    .intro h2 {
+        font-size: 24px;
+    }
+
+}
+
+
+/* =================================
+   10. AR INTERACTION CONTROLS
+================================= */
+
+.ar-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.ar-controls button {
+    margin-top: 0;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#reset-button {
+    background: #ffffff;
+    color: #171717;
+    border: 1px solid #dddddd;
+}
+
+#reset-button:hover:not(:disabled) {
+    background: #eeeeee;
+    transform: translateY(-2px);
+}
+
+#reset-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.control-hint {
+    margin-top: 12px;
+    color: #999999;
+    font-size: 12px;
+}
+
+/* Allow touch gestures to be handled by JavaScript */
+#ar-container canvas {
+    touch-action: none;
+}

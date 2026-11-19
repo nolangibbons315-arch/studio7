@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AR Model Viewer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    
+    <!-- Three.js and MindAR Libraries -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+            "mindar-image-three": "https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-three.prod.js"
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header class="header">
+        <h1>AR<span>VIEW</span></h1>
+        <p>Interactive Augmented Reality Experience</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <section class="intro">
+            <h2>Explore in Augmented Reality</h2>
+            <p>
+                Scan the image marker and interact
+                with the 3D model using your fingers.
+            </p>
+        </section>
+
+        <!-- AR Viewer -->
+        <section class="ar-card">
+
+            <div id="ar-container">
+
+                <div class="ar-message">
+                    <h3>Ready to Explore?</h3>
+                    <p>Press the button to start your AR experience.</p>
+                </div>
+
+            </div>
+
+            <div class="ar-controls">
+
+                <button id="start-button">
+                    Start AR Experience
+                </button>
+
+                <button id="reset-button" disabled>
+                    Reset View
+                </button>
+
+            </div>
+
+            <p class="control-hint">
+                Drag to rotate · Pinch to zoom
+            </p>
+
+        </section>
+
+        <!-- Instructions -->
+        <section class="instructions">
+
+            <h3>How to Interact</h3>
+
+            <div class="instruction-grid">
+
+                <div class="instruction">
+                    <h4>Rotate</h4>
+                    <p>Drag your finger to rotate the model.</p>
+                </div>
+
+                <div class="instruction">
+                    <h4>Zoom In</h4>
+                    <p>Pinch outward to enlarge the model.</p>
+                </div>
+
+                <div class="instruction">
+                    <h4>Zoom Out</h4>
+                    <p>Pinch inward to shrink the model.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>AR VIEW | Interactive 3D Experience</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
